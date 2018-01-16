@@ -1,0 +1,8 @@
+<h2>Hello, {{title}}!!!</h2>
+<button (click)="loadUsers()">Load Users...</button>
+<br>
+
+<app-user *ngFor="let u of users"
+          [user]="u"
+          (birthday)="onUserBirthday($event)">
+</app-user>
